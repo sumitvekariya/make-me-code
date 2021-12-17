@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://makemecode.com/sitemap.xml
+Sitemap: https://makemecode.com/sitemap-blog.xml
+Sitemap: https://makemecode.com/sitemap-links.xml
+Sitemap: https://makemecode.com/sitemap-tags.xml

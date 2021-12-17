@@ -1,0 +1,49 @@
+<niz-seo
+  *ngIf="page$ | async as page"
+  [title]="page.title"
+  [description]="'All posts of ' + page.title"
+  [route]="page.route"
+  [tags]="[page.title]"
+></niz-seo>
+
+<article class="container mt-8 space-y-6">
+  <app-breadcrumb
+    *ngIf="page$ | async as page"
+    [data]="page.title"
+  ></app-breadcrumb>
+  <h1>
+    {{ (page$ | async)?.title }}
+  </h1>
+  <div class="max-w-3-xl">
+    <scully-content></scully-content>
+  </div>
+
+  <app-featured
+    class="mt-5"
+    *ngFor="let route of tagPosts$ | async | slice: 0:1"
+    [route]="route"
+  ></app-featured>
+</article>
+<div
+  class="
+    container
+    flex flex-col
+    md:flex-row
+    space-y-4
+    md:space-y-0 md:space-x-6
+    mt-8
+  "
+>
+  <div class="w-full flex flex-col space-y-4">
+    <h2 class="text-2xl font-semibold">
+      Latest posts for {{ (page$ | async)?.title }}
+    </h2>
+    <div class="grid lg:grid-cols-2 gap-4">
+      <app-article
+        *ngFor="let blogPost of tagPosts$ | async | slice: 0:10"
+        [route]="blogPost"
+      >
+      </app-article>
+    </div>
+  </div>
+</div>

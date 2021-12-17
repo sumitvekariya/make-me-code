@@ -1,0 +1,24 @@
+<a
+  [routerLink]="'/tags/' + tag.slug"
+  class="chip chip-small mb-1 mr-1 gradient"
+  *ngFor="let tag of tags | async | slice: 0:limit"
+>
+  {{ tag.title }}
+</a>
+
+<a
+  *ngIf="(tags | async)?.length > limit"
+  [routerLink]="'/tags/'"
+  class="
+    text-sm
+    font-bold
+    uppercase
+    text-color
+    hover:text-primary
+    mr-2
+    focus-ring
+    rounded-md
+  "
+>
+  see all
+</a>

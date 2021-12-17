@@ -1,0 +1,15 @@
+.theme {
+  transition: transform 180ms ease;
+}
+
+.router-link-active {
+  @apply text-primary;
+}
+
+.router-link {
+  @apply text-xl font-semibold focus:outline-none;
+}
+
+.router-link:hover {
+  @apply text-primary;
+}

@@ -1,0 +1,27 @@
+<niz-seo></niz-seo>
+<div class="container grid lg:grid-cols-7 grid-cols-1 gap-x-12">
+  <div class="lg:col-span-5 space-y-8">
+    <niz-hire-us class="lg:hidden"></niz-hire-us>
+    <div class="grid md:grid-cols-2 gap-4">
+      <app-article
+        *ngFor="let blogPost of blogPosts$ | async | slice: 0:pageSize"
+        [route]="blogPost"
+      >
+      </app-article>
+      <div
+        *ngIf="blogPosts$ | async as posts"
+        intersection
+        (intersects)="loadMore(posts)"
+      ></div>
+    </div>
+  </div>
+  <div class="lg:col-span-2 space-y-8">
+    <niz-hire-us class="hidden lg:block"></niz-hire-us>
+    <niz-popular-posts></niz-popular-posts>
+    <div class="flex flex-col space-y-4">
+      <h2>Most Used Tags</h2>
+      <app-tags-view limit="6" [tags]="tags$"></app-tags-view>
+    </div>
+    <niz-most-read></niz-most-read>
+  </div>
+</div>

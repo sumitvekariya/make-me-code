@@ -1,0 +1,19 @@
+{
+  "title": "makemecode.com",
+  "description": "Weeklyish Articles about Web Development",
+  "id": "https://makemecode.com",
+  "link": "https://makemecode.com",
+  "language": "en",
+  "image": "https://makemecode.com/assets/img/featured.png",
+  "favicon": "https://makemecode.com/favicon.png",
+  "copyright": "2020 makemecode.com",
+  "generator": "Weeklyish Articles about Web Development",
+  "feedLinks": {
+    "json": "https://makemecode.com/feed.json",
+    "atom": "https://makemecode.com/feed.atom"
+  },
+  "outDir": "./dist/static",
+  "categories": ["Web Development", "Blog", "Angular", "node"],
+  "blogPostRouteSlug": "/blog",
+  "newestPostsFirst": true
+}

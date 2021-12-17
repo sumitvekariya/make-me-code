@@ -1,0 +1,11 @@
+a:hover {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+:host {
+  .author-image {
+    @apply h-24 w-24 rounded-full mt-0 ml-0 mb-0 mr-0;
+  }
+}

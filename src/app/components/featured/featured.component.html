@@ -1,0 +1,28 @@
+<div class="flex flex-col space-y-4 max-w-3xl">
+  <a
+    #link
+    class="flex flex-col space-y-4 featured rounded-md"
+    [routerLink]="[route.route]"
+  >
+    <h2 class="space-x-4 mt-1 text-4xl font-bold md:text-5xl">
+      {{ route.title }}
+    </h2>
+
+    <div class="text-xl text-color-light md:text-2xl">
+      {{ route.description }}
+    </div>
+  </a>
+  <div>
+    <a
+      [routerLink]="'/tags/' + (tag | dash | lowercase)"
+      class="mb-1 mr-1 gradient chip chip-small"
+      *ngFor="let tag of route.tags | slice: 0:3"
+    >
+      {{ tag }}
+    </a>
+  </div>
+  <div class="flex justify-between items-center">
+    <niz-author-small [author]="author$ | async"></niz-author-small>
+    <span class="text-base">{{ route.updatedAt | date: 'MMMM dd, yyyy' }}</span>
+  </div>
+</div>

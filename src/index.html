@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>notiz</title>
+    <meta
+      name="description"
+      content="Weeklyish articles about Angular, Nestjs, Web Components, and more things related to web development"
+    />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-icon-192x192.png" />
+    <meta name="theme-color" content="#55b9f3" />
+
+    <script
+      async
+      defer
+      data-domain="makemecode.com"
+      src="https://analytics.makemecode.com/js/plausible.outbound-links.js"
+    ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
+  </head>
+
+  <body class="font-sans antialiased">
+    <script>
+      // prevent theme flicker
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      const storedTheme =
+        window.localStorage && window.localStorage.getItem('theme');
+
+      const theme =
+        storedTheme === 'dark' || storedTheme === 'light'
+          ? storedTheme
+          : prefersDark
+          ? 'dark'
+          : 'light';
+      document.body.classList.toggle('dark', theme === 'dark');
+    </script>
+    <app-root></app-root>
+    <noscript>
+      Please enable JavaScript to continue using this application.
+    </noscript>
+  </body>
+</html>

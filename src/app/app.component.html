@@ -1,0 +1,96 @@
+<div
+  *ngIf="themeService.theme === 'dark'"
+  class="star"
+  [ngStyle]="{ 'box-shadow': stars }"
+></div>
+<header class="container pb-4 pt-8">
+  <div class="flex justify-between">
+    <div start class="flex flex-row space-x-8 items-center">
+      <a class="flex items-center select-none space-x-2" [routerLink]="['/']">
+        <niz-inline-svg
+          class="h-16 w-16"
+          svgSource="assets/img/logo.svg"
+        ></niz-inline-svg>
+        <span class="text-2xl font-black text-primary">makemecode.com </span>
+      </a>
+    </div>
+
+    <div end class="flex flex-row space-x-6 items-center">
+      <button
+        [attr.aria-label]="'Open search'"
+        (click)="openSearch(search)"
+        class="
+          hidden
+          md:flex
+          bg-canvas-light
+          border-solid border-2 border-canvas-light
+          hover:border-primary
+          focus-ring
+          rounded-xl
+          p-1
+          flex-row
+          space-x-1
+          items-center
+        "
+      >
+        <niz-inline-svg
+          class="h-4 w-4 theme"
+          svgSource="assets/img/search.svg"
+        ></niz-inline-svg>
+        <span class="px-2 outline-none font-semibold">
+          "<kbd>/</kbd>" to focus</span
+        >
+      </button>
+      <button
+        class="
+          flex
+          md:hidden
+          h-6
+          w-6
+          theme
+          rounded-full
+          focus-ring focus:ring-offset-4 focus:ring-offset-canvas
+          select-none
+        "
+        [attr.aria-label]="'Toggle theme'"
+        (click)="openSearch(search)"
+      >
+        <niz-inline-svg svgSource="assets/img/search.svg"></niz-inline-svg>
+      </button>
+      <button
+        class="
+          flex
+          h-6
+          w-6
+          theme
+          rounded-full
+          focus-ring focus:ring-offset-4 focus:ring-offset-canvas
+          select-none
+        "
+        [attr.aria-label]="'Toggle theme'"
+        [ngClass]="{
+          dark: themeService.theme === 'dark',
+          rotate: themeService.theme === 'dark'
+        }"
+        (click)="toggleTheme()"
+      >
+        <niz-inline-svg svgSource="assets/img/adjust.svg"></niz-inline-svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="mt-12">
+  <router-outlet></router-outlet>
+</main>
+
+<app-newsletter-signup #newsletter class="mt-8"></app-newsletter-signup>
+<niz-footer
+  class="my-10"
+  [footerSections]="footerSections"
+  [copyrightUrl]="copyrightUrl"
+  [createdWithSvgSources]="createdWithSvgSources"
+></niz-footer>
+
+<niz-search #search></niz-search>
+<niz-toast></niz-toast>

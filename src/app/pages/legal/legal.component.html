@@ -1,0 +1,12 @@
+<niz-seo
+  *ngIf="page$ | async as page"
+  [title]="page.title + ' - makemecode'"
+  [route]="page.route"
+  robots="nofollow, noindex"
+></niz-seo>
+
+<div class="prose container mt-8 space-y-6">
+  <app-breadcrumb></app-breadcrumb>
+  <h1 *ngIf="page$ | async as page">{{ page.title }}</h1>
+  <scully-content></scully-content>
+</div>

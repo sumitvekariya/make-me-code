@@ -1,0 +1,28 @@
+:host {
+  @apply flex flex-col w-full;
+}
+
+.featured:hover {
+  h2 {
+    @apply text-primary;
+  }
+}
+
+.prose:hover {
+  cursor: pointer;
+}
+
+.prose .backdrop {
+  @apply transition-opacity;
+  @apply duration-150;
+}
+
+.prose:hover {
+  .backdrop {
+    @apply opacity-75;
+  }
+}
+
+.gradient {
+  z-index: 3;
+}
