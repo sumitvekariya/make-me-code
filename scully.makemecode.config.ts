@@ -62,7 +62,7 @@ setPluginConfig(NotionDom, {notionBlocksHtmlParserOptions: {mdHighlightingOption
 
 export const config: ScullyConfig = {
   projectRoot: './src',
-  projectName: 'notiz',
+  projectName: 'makemecode',
   defaultPostRenderers,
   outDir: './dist/static',
   routes: {
