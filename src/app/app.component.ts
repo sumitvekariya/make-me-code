@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
       links: [
         {
           title: '@makemecode',
-          url: 'https://twitter.com/notiz_dev',
+          url: 'https://twitter.com/sarkazein7',
           svg: 'assets/img/twitter-white.svg',
           external: true,
         },
@@ -135,18 +135,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const notiz =
-      "##::: ##::'#######::'########:'####:'########:\n" +
-      "###:: ##:'##.... ##:... ##..::. ##::..... ##::\n" +
-      '####: ##: ##:::: ##:::: ##::::: ##:::::: ##:::\n' +
-      '## ## ##: ##:::: ##:::: ##::::: ##::::: ##::::\n' +
-      '##. ####: ##:::: ##:::: ##::::: ##:::: ##:::::\n' +
-      '##:. ###: ##:::: ##:::: ##::::: ##::: ##::::::\n' +
-      "##::. ##:. #######::::: ##::::'####: ########:\n";
-
-    console.log(
-      `${notiz} \n\n* notiz [noˈtiːt͡s] - (german) short, brief, written record \n\nInterested in our source code? It is available on GitHub https://github.com/notiz-dev/notiz ⭐. Created with Angular and Scully, hosted on Firebase.`
-    );
 
     this.themeService.initTheme();
 

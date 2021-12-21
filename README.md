@@ -2,7 +2,7 @@
   <a href="https://makemecode.com" target="blank"><img src="https://raw.githubusercontent.com/notiz-dev/notiz/master/src/assets/img/featured.png" width="460px" alt="makemecode.com" /></a>
 </p>
 
-# \*notiz.dev
+# \*makemecode.com
 
 **\*makemecode.com** is created by [Sumit Vekariya](https://makemecode.com/authors/sumit-vekariya). I love to share my experiences and findings working with Angular, Flutter, NestJS, Web Components and more. 👀 I am excited about the upcoming years of web / mobile development and hope to make some friends along the way.
 

@@ -7,7 +7,7 @@ import '@notiz/scully-plugin-copy-static-content';
 import '@notiz/scully-plugin-fouc';
 // import '@notiz/scully-plugin-rss';
 import '@notiz/scully-plugin-medium-zoom';
-import './projects/banner-generator';
+import './projects/banner-generator/src';
 import '@notiz/shortcodes/plugin/plugin';
 import { NotionDom, NotionDomPluginOptions, NotionDomRouter, NotionDomRouterPluginOptions } from '@notion-stuff/scully-plugin-notion';
 

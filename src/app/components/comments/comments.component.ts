@@ -53,12 +53,12 @@ export class CommentsComponent implements OnChanges, OnDestroy {
     (this.el.nativeElement as HTMLElement).querySelector('script')?.remove();
     const script: HTMLScriptElement = this.renderer.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'notiz-dev/notiz');
-    script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkyNDIwMDQ3NTU=');
+    script.setAttribute('data-repo', 'sumitvekariya/make-me-code');
+    script.setAttribute('data-repo-id', 'R_kgDOGi8yPQ');
     script.setAttribute('data-category', 'General');
     script.setAttribute(
       'data-category-id',
-      'MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDY1OTYw'
+      'DIC_kwDOGi8yPc4CAWzq'
     );
     script.setAttribute('data-mapping', 'title');
     script.setAttribute('data-reactions-enabled', '1');
